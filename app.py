@@ -15,7 +15,7 @@ def index_tamaños(pdf_file):
             alto = pagina.mediabox.height
             
             # Identificar tamaños
-            if ancho >= 595 and alto >= 842:  # A3 (más grande que A4)
+            if (ancho >= 843 or alto >= 843):  # A3 (más grande que A4)
                 paginas_A3.append(i + 1)
             else:  # Asumimos que el resto son A4
                 paginas_A4.append(i + 1)
